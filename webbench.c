@@ -343,7 +343,7 @@ static int bench(void)
     }
     close(i);
 
-    /* 创建管道 */
+    /* 创建无名管道--只能用于父子进程或者兄弟进程之间通信 */
     if(pipe(mypipe)) {
         perror("pipe failed.");
         return 3;
